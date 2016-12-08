@@ -1,0 +1,33 @@
+// *****************************************************************************
+// JAVASCRIPT I18N FILE - FRENCH
+// *****************************************************************************
+var bookmarkUrl = "http://icustom.tooliphone.net/en/bookmark";
+if( isDebugMode() ){ bookmarkUrl = "http://icustom.tooliphone.net/en/test-bookmark"; } 
+
+msg = {
+  validation_mandatory: "This field is mandatory !",
+  
+  validation_site_url: "The website URL address must begin with \"http://\" or \"https://\".",
+  validation_site_emptyKO: "You should set an URL for this browser, it cannot be launched without it.",
+  validation_site_httpsKO: "Sorry, but it seems that this browser doesn't supports \"https://\" shortcuts, perhaps it will not work...",
+  
+  validation_icon_url: "The icon URL address must begin with \"http://\" or \"https://\".",
+  validation_iconFormat_url : "The icon URL address should ends with a valid image file extension ('.png', '.jpg', '.jpeg', '.gif', '.ico', ...)",
+  validation_iconPreview_corruptedImage : "This image seems to be broken...",
+  validation_iconPreview_invalidURL : "This URL seems to be incorrect...",
+  validation_iconPreview_tooBig : "This image is very large for an icon : it should not work as expected.",
+  validation_iconPreview_notSquared : "This image is not squared : it will be resized and cropped by iOS.",
+
+  validation_emails_to: "At least one destination email address seems to be incorrect.",
+  validation_emails_cc: "At least one carbon copy email address seems to be incorrect.",
+  validation_emails_bcc: "At least one blank carbon copy email address seems to be incorrect.",
+  
+  picup_callbackURL : "http://icustom.tooliphone.net/en/config",
+  picup_purpose : "Add a custom icon with iCustom",
+  picup_icon_uploadFailed : "The image upload using the Picup app failed...",
+  
+  bookmark_error : "An error occurred during bookmarkable page generation. Please try again !",
+  bookmark_URL : bookmarkUrl,
+    
+  lang:'en'
+};

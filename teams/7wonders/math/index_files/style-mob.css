@@ -1,0 +1,466 @@
+/* 
+  Specific CSS to comlete iwebkit CSS if website displayed from a mobile iPhone 
+*/
+body{
+  background: #e3eaf7;
+}
+
+#thefamouspageLink .name { color:blue; }
+
+/* Utilities */
+.clear{ clear:both; }
+.displayNone{ display:none; }
+.displayBlock{ display:block; }
+
+/* Buttons classes */
+.buttonBlue{ background: -webkit-gradient(linear, left top, left bottom, from(#00ADEE), to(#0078A5)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+.buttonBlueGray{ background: -webkit-gradient(linear, left top, left bottom, from(#8aa1bf), to(#496b9b)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+.buttonGreen{ background: -webkit-gradient(linear, left top, left bottom, from(#7DB72F), to(#4E7D0E)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+.buttonRed{ background: -webkit-gradient(linear, left top, left bottom, from(#ED1C24), to(#AA1317)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+.buttonOrange{ background: -webkit-gradient(linear, left top, left bottom, from(#FAA51A), to(#F47A20)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+.buttonWhite{ background: -webkit-gradient(linear, left top, left bottom, from(white), to(#999999)); color: #000; text-shadow: rgba(256,256,256,1) 0 -1px 0; }
+.buttonGray{ background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#575757)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+.buttonBlack{ background: -webkit-gradient(linear, left top, left bottom, from(#666), to(black)); color: #fff; text-shadow: rgba(0,0,0,1) 0 -1px 0; }
+
+/* Messages Styles */
+.error .header, .error .validationMessage{ color: #B40404 !important; }
+.warning .header, .warning .validationMessage{ color: #FF8000 !important; }
+.success .header, .success .validationMessage{ color: #088A08 !important; }
+.info .header, .info .validationMessage{ color: #496691 !important; }
+.debug .header, .debug .validationMessage{ color: #gray !important; }
+
+/* Validation inputs */
+.bigfield.error, .smallfield.error, .select.error select{ background: #FFCCCC !important; color: black;}
+.bigfield.warning, .smallfield.warning, .select.warning select{ background: #FFDD00 !important; color: black;}
+
+.bigfield.error .clearAction, .smallfield.error .clearAction{ background-color: #FFCCCC !important; }
+.bigfield.warning .clearAction, .smallfield.warning .clearAction{ background-color: #FFDD00 !important; }
+
+/* Help message item */
+.helpItem{ background: #F0FFF0; margin-bottom: 9px; }
+.warnItem{ background: #F7DE7E; margin-bottom: 9px; }
+.downloadItem{ background: #E2FBFF; margin-bottom: 9px; }
+
+
+#duobutton{
+  margin:0;
+}
+#duobutton .links{
+  -webkit-border-image:none;
+}
+#duobutton-Button1, #duobutton-Button2{
+  width: 48% !important;
+  -webkit-border-radius: 5px !important;
+  border-right: 0px !important;
+}
+
+/* Reset links */
+a:link, a:visited, a:active, a:hover{
+  text-decoration: none;
+}
+
+li.checkbox img {
+	width: auto;
+	height: 32px;
+	margin: 5px 0 0 5px;
+	float: left;
+}
+
+
+
+
+/*#iconStatusField .resultImage { text-align:center; }*/
+#iconLoaded { max-width: 160px; max-height: 160px; }
+
+
+
+
+/*#configForm{ margin: 30px 0; padding: 30px 0; border-top: 2px dotted gray; border-bottom: 2px dotted gray; }*/
+
+/* Content of website for mobile (header + content + footer) */
+#iphoneContent{
+  /*max-width: 320px; */
+  width: 100%;
+  min-height: 340px;
+}
+
+
+
+#loadContent {
+  display:block;
+}
+#loadContent #successMessage, #loadContent #failureMessage{
+  display:none;
+}
+
+
+
+#pleaseWait{
+  display:none;
+  border-collapse:collapse;
+  width:100%;
+  background:#FFFFFF;
+  padding:20px 0;
+}
+#pleaseWait td{
+  text-align:center;
+  /*vertical-align:middle;*/    
+}
+#pleaseWait .animation{
+  margin:20px 0;  
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* HEADER SECTION */
+
+/* Content of header for mobile (pre-header + topbar + post-header) */
+#iHeader{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*POSITION_FIXED = position:fixed;*/
+  top:0;
+  left:0;
+  z-index: 9999;
+}
+
+
+/* Overwrite iwebkit for iOS7 */
+#topbar {
+	margin-bottom: 0px;
+	background: #F7F7F7;
+}
+#leftnav a, #leftnav a:first-child{
+  -webkit-border-image: none;
+  padding-left: 18px;
+}
+#rightnav a, #rightnav a:first-child{
+  -webkit-border-image: none;
+  /*padding-right: 18px;*/
+}
+#topbar #title, #leftnav a, #rightnav a, #leftbutton a, #rightbutton a, #blueleftbutton a, #bluerightbutton a{
+  color: #60AAFC;
+  text-shadow: none;
+}
+#leftnav { background: url("http://tooliphone.net/common/img/icons/ios7_nav_left-20.png") no-repeat left 0 top 4px; }
+/*#rightnav { background: url("http://tooliphone.net/common/img/icons/ios7_nav_right-20.png") no-repeat right 0 top 4px; }*/
+
+
+#iHeader .gradient{
+  background: -moz-linear-gradient(top,  rgba(109,132,162,1) 0%, rgba(199,205,212,0.6) 75%, rgba(229,229,229,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,132,162,1)), color-stop(75%,rgba(199,205,212,0.6)), color-stop(100%,rgba(229,229,229,0)));
+  background: -webkit-linear-gradient(top,  rgba(109,132,162,1) 0%,rgba(199,205,212,0.6) 75%,rgba(229,229,229,0) 100%);
+  background: -o-linear-gradient(top,  rgba(109,132,162,1) 0%,rgba(199,205,212,0.6) 75%,rgba(229,229,229,0) 100%);
+  background: -ms-linear-gradient(top,  rgba(109,132,162,1) 0%,rgba(199,205,212,0.6) 75%,rgba(229,229,229,0) 100%);
+  background: linear-gradient(top,  rgba(109,132,162,1) 0%,rgba(199,205,212,0.6) 75%,rgba(229,229,229,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d84a2', endColorstr='#00e5e5e5',GradientType=0 );
+  width: 100%;
+  height: 20px;
+}
+
+.bigAdMob{
+  text-align:center;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* CONTENT SECTION */
+
+/* Content for mobile (between header and footer) */
+.ppcallback #iContent{
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+  border: 0;
+}
+#iContent{
+  /*POSITION_FIXED = margin: 110px 0px 10px 0px;*/
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+  border: 0;
+}
+
+/* For elements displayed in the content : margin to display like the other iwebkit elements */
+.marginContent{
+  margin: 0 9px;
+  padding: 0px;
+  border: 0;
+  list-style-type: none;
+}
+.marginContent li, .marginContent a:link, .marginContent a:visited, .marginContent a:active, .marginContent a:hover{
+  text-decoration: none;
+  padding: 5px 0px;
+}
+
+
+/* For empty page and icon area */
+.iconInfos{
+  margin:10px;
+  border: 3px solid #496691;
+  background: #FFFFFF;
+}
+
+.iconInfos .iconImage{
+    float: left;
+    margin: 10px;
+    padding: 2px;
+    border: 1px dashed gray;
+}
+.iconInfos .iconImage .icon{
+    background: #000000;
+    border-radius: 15%;
+    -webkit-border-radius: 15px;
+}
+.iconInfos .iconImage img{
+    height: 64px;
+    width: 64px;
+    border-radius: 15%;
+    -webkit-border-radius: 15px;
+}
+
+.iconInfos .iconText{
+  float:left;
+  margin: 10px;
+  /*width:140px;*/
+}
+
+
+
+/* For icons selection */
+#backgroundSelectIcons{
+  position:relative;
+}
+
+#backgroundSelectImage{
+  width:100%;
+}
+
+#backgroundSelectTable{
+  border-collapse:collapse; 
+  width:95%; 
+  position:absolute; 
+  top:0; 
+  margin:0 2.5%;
+}
+
+#backgroundSelectTable .iconCellEmpty{
+  font-size:0;
+  padding:0;
+  margin:0;
+  line-height:0;
+  border:0;
+}
+#backgroundSelectTable .iconCellEmptyFisrt{
+  height:11%;
+}
+#backgroundSelectTable .iconCellEmpty1{
+  height:5%;
+}
+#backgroundSelectTable .iconCellEmpty2{
+  height:5%;
+}
+#backgroundSelectTable .iconCellEmpty3{
+  height:4%;
+}
+#backgroundSelectTable .iconCell{
+  width:25%; 
+  height:20%; 
+  text-align:center; 
+  vertical-align:middle;
+  /*border:1px solid white;*/
+}
+#backgroundSelectTable .iconCell a, #backgroundSelectTable .iconCell a:visited{
+  color:white;font-size:11pt;
+}
+
+#backgroundSelectTable .iconCellText{
+  width:80%;
+  height:80%;
+  margin:10%;
+  border-collapse:collapse;
+}
+#backgroundSelectTable .iconCellText td{
+  text-align:center;
+  vertical-align:middle;
+}
+
+
+
+
+
+
+.iconSelectImage{
+  position: relative; 
+  width: 100%; 
+  margin-bottom: 15px;
+  /*max-width:640px;*/
+}
+.iconSelectImage img{
+  width: 100%; 
+}
+.iconSelectImage .iconCell{
+  position: absolute;
+  /*border: 1px dashed #333333;*/
+  border-radius: 15%;
+  -webkit-border-radius: 10px;
+  background: #FFFFFF; 
+  opacity: 0.6;
+}
+.iconSelectImage .iconCellText{
+  width:100%;
+  height:100%;
+  border-collapse:collapse;
+}
+.iconSelectImage .iconCellText td{
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  /*text-shadow: 0 0 1px #CCCCCC;*/
+  text-align:center;
+  vertical-align:middle;
+  width:100%;
+  height:100%;
+}
+
+.iconSelectImage .iconCellCustom{
+  height: 11.88%;
+  width: 17.81%;  
+}
+.iconSelectImage .iconCell-640x960-114x114-ios4, .iconSelectImage .iconCell-320x480-57x57-ios4{
+  height: 14.88%;
+  width: 17.81%;  
+}
+.iconSelectImage .iconCell-768x1024-72x72-ios4{
+  height: 8.67%;
+  width: 9.38%;  
+}
+.iconSelectImage .iconCell-1024x768-72x72-ios4{
+  height: 11.01%;
+  width: 7.03%;  
+}
+
+
+
+
+.errorUpload{
+  margin-top:20px;
+}
+.errorUpload .cause{
+  background: url("/images/warning_mini.png") no-repeat scroll 0 0 transparent;
+  color: #333333;
+  font-weight: bold;
+  padding-left: 25px;
+}
+.errorUpload .advice{
+  color: #777777;
+  font-style: italic;
+}
+
+
+
+
+
+/* For screenshots and images viewer */
+#screenshots{
+  margin: 0 8px;
+  padding: 0;
+  border: 0;
+}
+.miniScreenshot{
+  width: 68px;
+  
+  margin: 3px;
+  padding: 0;
+  border: 1px solid #6d84a2;
+  
+  vertical-align: middle;
+}
+.maxiScreenshot{
+  width:186px;
+  height:285px;
+  
+  margin: 0 26px 0 26px ;
+  padding: 0;
+  border: 2px solid #6d84a2;
+  
+  vertical-align: middle;
+}
+.navArrow{
+  width:8px;
+  
+  margin: 11px;
+  padding: 0;
+  border: 0;
+  
+  vertical-align: middle;
+}
+.navText{
+  width:100%;
+
+  margin: 3px 0;
+  padding: 0;
+  border: 0;
+
+  text-align: center;  
+  font:14px arial,sans-serif black;
+  font-weight: bold;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* FOOTER SECTION */
+
+/* Content of footer for mobile (pre-footer + footer + post-footer) */
+#iFooterAction{
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cdd5df), color-stop(3%, #b0bccd), color-stop(50%, #889bb3), color-stop(51%, #8195af), color-stop(97%, #6d84a2), to(#2d3642));
+  /*border-top:1px dashed #AAAAAA; 
+  border-bottom:1px dashed #AAAAAA;*/ 
+  /*margin:20px 0 0 0;*/ 
+  height: 44px;
+  width:100%; 
+  vertical-align:middle; 
+  text-align:center; 
+  border-collapse:collapse;
+  font-size:14px;
+  font-weight:bold;
+  font-style:italic;
+  text-shadow: rgba(0,0,0,0.6) 0 -1px 0;
+  color:#FFFFFF;
+}
+
+#iFooter{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*position:fixed;*/ /*SI FOOTER FIXED*/
+  bottom:0;
+  left:0;
+  z-index: 9999;
+}   
+
+#iFooter .gradient{
+  background: -moz-linear-gradient(top,  rgba(229,229,229,0) 0%, rgba(199,205,212,0.6) 25%, rgba(109,132,162,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,229,229,0)), color-stop(25%,rgba(199,205,212,0.6)), color-stop(100%,rgba(109,132,162,1)));
+  background: -webkit-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(199,205,212,0.6) 25%,rgba(109,132,162,1) 100%);
+  background: -o-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(199,205,212,0.6) 25%,rgba(109,132,162,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(199,205,212,0.6) 25%,rgba(109,132,162,1) 100%);
+  background: linear-gradient(top,  rgba(229,229,229,0) 0%,rgba(199,205,212,0.6) 25%,rgba(109,132,162,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e5e5e5', endColorstr='#6d84a2',GradientType=0 );
+  width: 100%;
+  height: 20px;
+}
+
+.preFooter{
+  /*margin-bottom: 70px;*/ /*SI FOOTER FIXED*/
+  font-family: helvetica,sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: italic;
+  text-align:center; 
+  color:#496b9a;
+}
+
+

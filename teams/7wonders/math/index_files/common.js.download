@@ -1,0 +1,133 @@
+function scookie(name,value,days)
+{
+    var expire=new Date();
+    expire.setDate(expire.getDate()+days);
+    document.cookie=name+'='+escape(value)+';expires='+expire.toGMTString();
+    return true;
+}
+function gcookie(name)
+{
+    if(document.cookie.length>0)
+    {
+        start=document.cookie.indexOf(name+"=");
+        pos = start+name.length+1;
+        if(start!=0)
+        {
+            start=document.cookie.indexOf("; "+name+"=");
+            pos = start+name.length+3;
+        }
+        if(start!=-1)
+        { 
+            start=pos;
+            end=document.cookie.indexOf(";",start);
+            if(end==-1)
+            {
+                end=document.cookie.length;
+            }
+            return unescape(document.cookie.substring(start,end));
+        } 
+    }
+    return '';
+    }
+
+function theFamousPagePromoLightON(){
+	$jq("#thefamouspageLink a span:first").fadeIn(1000, theFamousPagePromoLightOFF);
+}
+function theFamousPagePromoLightOFF(){
+	setTimeout('$jq("#thefamouspageLink a span:first").fadeOut(2000, theFamousPagePromoLightON)', 3000);
+}
+
+function theFamousPagePromoON(){
+	var tfpCookie = gcookie("theFamousPagePromoCookie");
+
+if(tfpCookie!="okicookie"){
+	var tfpp = document.getElementById('theFamousPagePromo');
+	var iphoneContent = document.getElementById('iphoneContent');
+	
+	if(tfpp!=null && iphoneContent!=null){
+    	iphoneContent.style.display='none';
+    	tfpp.style.display='block';
+      	}
+	}
+}
+
+function theFamousPagePromoOFF(){
+	scookie("theFamousPagePromoCookie", "okicookie", 999);
+
+var tfpp = document.getElementById('theFamousPagePromo');
+var iphoneContent = document.getElementById('iphoneContent');
+
+if(tfpp!=null && iphoneContent!=null){
+	tfpp.style.display='none';
+	iphoneContent.style.display='block';
+  	}
+}
+
+
+function showMobileFooter(){
+  var ifooter = document.getElementById('iFooter');
+  if(ifooter!=null){
+    ifooter.style.display='block';
+  }
+  
+  location.href="#iFooterActionLink";
+  
+  var ifooteraction = document.getElementById('iFooterAction');
+  if(ifooteraction!=null){
+    ifooteraction.style.display='none';
+  }
+}
+
+function hideMobileFooter(){
+  var ifooter = document.getElementById('iFooter');
+  if(ifooter!=null){
+    ifooter.style.display='none';
+  }
+}
+
+
+function switchItemDisplay(elementId){
+  element = $jq('#'+elementId);
+  if(element!=null){
+    if(element.is(":visible")){
+      element.fadeOut(1000);
+    } else{
+      element.fadeIn(1000);
+    }
+  }
+}
+function switchItemDisplayOldJS(elementId){
+  element = document.getElementById(elementId);
+  if(element!=null){
+    if(element.style.display=='none'){
+      element.style.display='block';
+    } else{
+      element.style.display='none';
+    }
+  }
+}
+
+function switchCheckDisplay(checkItem, itemToSwitch)
+{
+  var checkbox = $jq('#'+checkItem+'Input');
+  var item = $jq('#'+itemToSwitch);
+  if( checkbox.prop('checked') == true ){item.slideDown(600);}
+  else{item.slideUp(600);}
+}
+function switchCheckDisplayOldJS(checkItem, itemToSwitch)
+{
+  var checkbox = document.getElementById(checkItem+'Input');
+  var item = document.getElementById(itemToSwitch);
+  if( checkbox.checked == true ){item.style.display = 'block';}
+  else{item.style.display = 'none';}
+}
+
+function switchDisplay(itemToSwitch)
+{
+  var item = document.getElementById(itemToSwitch);
+  if( item!=null && item.style.display == 'block' ){
+    item.style.display = 'none';
+  } else {
+    item.style.display = 'block';
+  }
+} 
