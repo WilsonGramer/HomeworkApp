@@ -1,0 +1,13 @@
+/* 
+  Specific CSS to comlete iwebkit CSS if website displayed from a mobile iPhone 
+*/
+
+#iHeader { box-shadow: 0px 3px 20px 0px lightgray; margin-bottom: 25px; }
+#topbar { background: #F9F9F9; border-bottom: 1px solid lightgray; }
+#leftnav, #rightnav { background: none; }
+@media screen and (max-width: 320px){ #leftnav img, #rightnav img { height: 28px; width: 28px; } }
+@media screen and (min-width: 321px){ #leftnav img, #rightnav img { height: 24px; width: 24px; } }
+#leftnav img, #rightnav img { margin: 0; vertical-align: bottom; }
+#leftnav a, #rightnav a, #leftnav a:first-child, #rightnav a:first-child { color: #60AAFC; padding: 0; font-size: 11pt; }
+
+#toolboxShareFollowApps { display: none; }
